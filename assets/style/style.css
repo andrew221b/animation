@@ -13,32 +13,32 @@
   font-size: 75px;
   perspective: 10em;
   perspective-origin: 50% calc(50% - 2.5em);
-  animation: luminous 2.5s infinite ease-out;
+  animation: luminous 3.5s infinite ease-out;
 }
 
 @keyframes luminous {
-  0%, 100% {
+
+  0%,
+  100% {
     background-color: #000;
   }
 
   50% {
-    background-color: #000606;
-}
+    background-color: #001818;
+  }
 }
 
 .scene {
   position: relative;
-  animation: sceneRotate 60s infinite linear;
+  animation: sceneRotate 100s infinite linear;
   transform-style: preserve-3d;
 }
- 
+
 @keyframes sceneRotate {
-   to { 
-      transform: rotateY(360deg); 
-    }
+  to {
+    transform: rotateY(360deg);
   }
-
-
+}
 
 .floor {
   position: absolute;
@@ -53,77 +53,99 @@
       #111 0deg 90deg,
       #222 90deg 180deg);
   background-size: 100%, 1em 1em;
-  animation: floor 2.5s infinite ease-in-out;
+  animation:
+    floor-light 3.5s infinite ease-out,
+    floor 3.5s infinite ease-out;
 }
 
+@keyframes floor-light {
+
+  0% {
+    background-size: 100%, 1em 1em;
+    box-shadow:
+      0 0 2em .5em #000606, 0 0 1em .3em #0ff;
+  }
+
+  93% {
+    background-size: 100%, 1em 1em;
+    box-shadow:
+      0 0 1em .5em #000606, 0 0 .5em .1em #0ff;
+  }
+
+  100% {
+    background-size: 100%, 1em 1em;
+    box-shadow:
+      0 0 2em .5em #000606, 0 0 1em .3em #0ff;
+  }
+}
 
 
 @keyframes floor {
-0% {
- background: radial-gradient(#e66464b5, #00ffff0c 22%, #000000 50%),
- repeating-conic-gradient(from 45deg,
- #111 0deg 90deg,
- #222 90deg 180deg);
- background-size: 100%, 1em 1em;
-}
+  0% {
+    background: radial-gradient(#e66464b5, #00ffff0c 24%, #000000 50%),
+      repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-12% {
-  background: radial-gradient(#e66464b5, #00ffff0c 24%, #000000 55%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  12% {
+    background: radial-gradient(#e66464b5, #00ffff0c 22%, #000000 52%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-25% {
-  background: radial-gradient(#e66464b5, #00ffff0c 22%, #000000 60%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  25% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 60%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-37% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 65%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  37% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 65%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-50% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 70%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  50% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 70%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-62% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 65%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  62% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 65%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-75% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 60%),repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  75% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 60%), repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-87% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 55%),
-  repeating-conic-gradient(from 45deg,
-  #111 0deg 90deg,
-  #222 90deg 180deg);
-  background-size: 100%, 1em 1em;
-}
+  87% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 55%),
+      repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 
-100% {
-  background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 50%),
- repeating-conic-gradient(from 45deg,
- #111 0deg 90deg,
- #222 90deg 180deg);
- background-size: 100%, 1em 1em;
-}
+  100% {
+    background: radial-gradient(#e66464b5, #00ffff0c 20%, #000000 50%),
+      repeating-conic-gradient(from 45deg,
+        #111 0deg 90deg,
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+  }
 }
 
 .cube {
@@ -133,17 +155,20 @@
   transform-style: preserve-3d;
   bottom: -1em;
   left: -1em;
-  animation: collision 2.5s infinite linear;
+  animation: collision 3.5s infinite linear;
 }
 
 @keyframes collision {
-0%, 100% {
-height: 1.5em;
-}
 
-10%, 91% {
-height: 2em;
-}
+  0%,
+  100% {
+    height: 1.5em;
+  }
+
+  10%,
+  93% {
+    height: 2em;
+  }
 }
 
 .left,
@@ -199,28 +224,30 @@ height: 2em;
   height: 1em;
   border-radius: 50%;
   border: .02em solid rgba(0, 255, 255, 0.483);
-  background: radial-gradient(circle at top, #0ff, #33abf6, 40%, #00000071, 85%, #f2c8c8df );
+  background: radial-gradient(circle at top, #0ff, #33abf6, 40%, #00000071, 85%, #f2c8c8df);
   background-color: #4ac5ebf6;
   box-shadow:
     0 0 #6bdcff, 0 0 #0ff;
   filter: blur(.013em);
   left: -.5em;
   bottom: 1em;
-  animation: 
-  bounce 2.5s infinite ease-out,
-  sceneRotate 60s infinite linear reverse;
+  animation:
+    bounce 3.5s infinite ease-out,
+    sceneRotate 100s infinite linear reverse;
 }
 
 @keyframes bounce {
-  0% ,100% {
+
+  0%,
+  100% {
     bottom: 0.5em;
   }
 
   50% {
     bottom: 3em;
     animation-timing-function: ease-in;
-    background: radial-gradient(circle at top, #0ff, #33abf6, 40%, #00000071, 85%, #f2c8c8be );
+    background: radial-gradient(circle at top, #0ff, #33abf6, 40%, #00000071, 85%, #f2c8c8be);
     box-shadow:
-    0 0 1em 0.5em #6bdcff, 0 0 3em .3em #0ff;
+      0 0 1em 0.5em #6bdcff, 0 0 3em .3em #0ff;
   }
 }
